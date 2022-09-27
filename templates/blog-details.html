@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
 <html lang="en">
 <head>
@@ -11,6 +12,7 @@
   <link rel="stylesheet" href="{% static 'styles.min.css' %}">
 </head>
 <body>
+{% block content %}
   <!--================Header Menu Area =================-->
   <header class="header_area">
     <div class="main_menu">
@@ -219,5 +221,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <!--================ End Footer Area =================-->
 
   <script src="{% static 'scripts.js' %}"></script>
+{% endblock %}
 </body>
 </html>
