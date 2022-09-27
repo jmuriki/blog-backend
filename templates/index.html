@@ -28,8 +28,8 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav justify-content-center">
-              <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right navbar-social">
               <li><a href="#"><i class="ti-facebook"></i></a></li>
@@ -70,7 +70,7 @@
                   <img class="card-img rounded-0" src="{{post.image_url}}" alt="">
                 </div>
                 <div class="blog__slide__content">
-                  <h3><a href="#">{{post.title}}</a></h3>
+                  <h3><a href="{% url 'post_detail' slug=post.slug %}">{{post.title}}</a></h3>
                   <p>{{post.published_at}}</p>
                 </div>
               </div>
